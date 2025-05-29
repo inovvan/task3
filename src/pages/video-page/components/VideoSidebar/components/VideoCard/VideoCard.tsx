@@ -16,7 +16,7 @@ const VideoCard = ({ title, views, channel, time, imgUrl }: VideoCardProps) => {
           <img
             className="media-fit"
             src={imgUrl}
-            alt="Video preview"
+            alt="Превью видео"
           />
           <div className={styles["video-card__time"]}>{time}</div>
         </div>

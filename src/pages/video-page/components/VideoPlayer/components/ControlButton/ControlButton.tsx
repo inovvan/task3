@@ -1,4 +1,5 @@
 import styles from "./ControlButton.module.scss";
+import classNames from "classnames";
 
 type Kind =
   | "play"
@@ -18,7 +19,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
   return (
     <>
       {kind === "pause" && (
-        <button className={styles["control-button--white"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--white"])}>
           <svg
             width="22"
             height="24"
@@ -37,7 +38,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "next" && (
-        <button className={styles["control-button--white"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--white"])}>
           <svg
             width="27"
             height="18"
@@ -56,7 +57,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "volume" && (
-        <button className={styles["control-button--white"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--white"])}>
           <svg
             width="24"
             height="24"
@@ -75,7 +76,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "subtitles" && (
-        <button className={styles["control-button--gray"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--gray"])}>
           <svg
             width="27"
             height="18"
@@ -94,7 +95,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "settings" && (
-        <button className={styles["control-button--gray"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--gray"])}>
           <svg
             width="27"
             height="27"
@@ -113,7 +114,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "size" && (
-        <button className={styles["control-button--gray"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--gray"])}>
           <svg
             width="30"
             height="21"
@@ -132,7 +133,7 @@ const ControlButton = ({ kind }: ControlButtonProps) => {
       )}
 
       {kind === "fullscreen" && (
-        <button className={styles["control-button--gray"]}>
+        <button className={classNames(styles["control-button"], styles["control-button--gray"])}>
           <svg
             width="33"
             height="24"

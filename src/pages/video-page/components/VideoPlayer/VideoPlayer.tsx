@@ -76,21 +76,21 @@ const VideoPlayer = () => {
               className={styles["video-player-description__buttons-container"]}
             >
               <PrimaryButton type="secondary">
-                <img src="/img/icons/like.svg" alt="Like icon" />
+                <img src="/img/icons/like.svg" alt="Иконка лайка" />
                 <span>123k</span>
               </PrimaryButton>
               <PrimaryButton type="secondary">
-                <img src="/img/icons/dislike.svg" alt="Dislike icon" />
+                <img src="/img/icons/dislike.svg" alt="Иконка дизлайка" />
                 <span>435k</span>
               </PrimaryButton>
               <PrimaryButton type="secondary">
-                <img src="/img/icons/share.svg" alt="Share icon" />
+                <img src="/img/icons/share.svg" alt="Иконка поделиться" />
                 <span>Share</span>
               </PrimaryButton>
               <button
                 className={styles["video-player-description__more-button"]}
               >
-                <img src="/img/icons/more-horizontal.png" alt="More icon" />
+                <img src="/img/icons/more-horizontal.png" alt="Иконка раскрытия" />
               </button>
             </div>
           </div>
