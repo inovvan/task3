@@ -1,0 +1,31 @@
+.primary-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-l);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.primary-button--primary {
+    color: var(--white-text-color);
+    background-color: var(--red-background-color);
+}
+
+.primary-button--primary:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.primary-button--secondary {
+    background-color: var(--light-gray-background-color);
+}
+
+.primary-button--secondary:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(142, 142, 142, 0.6);
+}

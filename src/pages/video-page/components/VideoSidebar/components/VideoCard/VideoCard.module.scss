@@ -1,0 +1,78 @@
+@use '@assets/styles/mixins.scss' as *;
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    cursor: pointer;    
+
+    @include custom-media(935px) {
+        gap: 8px;
+    }
+}
+
+.video-card__preview {
+    position: relative;
+    width: 367px;
+    height: 213px;
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+
+    @include custom-media(935px) {
+        width: 288px;
+        height: 150px;
+    }
+
+    @include custom-media(690px) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 288 / 150;
+    }
+}
+
+.video-card__time {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 24px;
+    border-radius: var(--border-radius-s);
+    background-color: var(--dark-transparent-background-color);
+    color: var(--white-text-color);
+    right: 10px;
+    bottom: 10px;
+    font-size: var(--font-size-s);
+}
+
+.video-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+     @include custom-media(935px) {
+        gap: 4px;
+    }
+}
+
+.video-card-info__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    @include custom-media(935px) {
+        font-size: var(--font-size-m);
+    }
+}
+
+.video-card-info__views-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--quaternary-text-color);
+    font-size: var(--font-size-l);
+
+    @include custom-media(935px) {
+        font-size: var(--font-size-xs);
+    }
+}

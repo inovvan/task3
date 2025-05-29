@@ -1,0 +1,98 @@
+@use '@assets/styles/mixins.scss' as *;
+
+.video-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include custom-media(935px) {
+      gap: 13px;
+    }
+}
+
+.video-sidebar__video-list {
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+     @include custom-media(1320px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+
+.video-sidebar__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.video-sidebar__title {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bold);
+
+    @include custom-media(935px) {
+      font-size: calc(var(--font-size-l) + 2px);
+    }
+}
+
+.video-sidebar__switch {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+
+    @include custom-media(935px) {
+      font-size: var(--font-size-xxxs);
+    }
+}
+
+.video-sidebar__switch input {
+  display: none;
+}
+
+.video-sidebar__slider {
+  position: relative;
+  cursor: pointer;
+  width: 44px;
+  height: 28px;
+  border-radius: var(--border-radius-m);
+  background-color: var(--light-gray-background-color);
+
+  @include custom-media(935px) {
+      width: 30px;
+    height: 19px;
+  }
+}
+
+.video-sidebar__slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--gray-background-color);
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  @include custom-media(935px) {
+      width: 16.36px;
+    height: 16.36px;
+    bottom: 1px;
+  }
+}
+
+.video-sidebar__switch input:checked ~ .video-sidebar__slider::before {
+  transform: translateX(16.5px);
+  background-color: var(--blue-background-color);
+  box-shadow: 0px 1px 1px 0px #0000003D;
+
+  @include custom-media(935px) {
+    transform: translateX(10px);
+  }
+}
