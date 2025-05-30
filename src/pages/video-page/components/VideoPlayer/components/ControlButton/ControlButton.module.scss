@@ -1,0 +1,12 @@
+.control-button--white {
+    color: var(--white-text-color);
+}
+
+.control-button--gray {
+    color: var(--white-text-color);
+    opacity: 0.6;
+}
+
+.control-button:hover {
+    color: var(--red-background-color);
+}

@@ -1,0 +1,24 @@
+@use '@assets/styles/mixins.scss' as *;
+
+.video-page {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 70px 30px 80px;
+
+    @include custom-media(1320px) {
+        flex-direction: column;
+    }
+
+    @include custom-media(785px) {
+        padding: 0 32px 30px;
+    }
+
+    @include custom-media(680px) {
+        padding: 0 16px 30px;
+    }
+}
+
+.video-page__content {
+    flex-grow: 1;
+}
